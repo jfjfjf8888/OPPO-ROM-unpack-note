@@ -14,7 +14,7 @@ ROM是从OPPO官网找的，对应的手机型号是：***OPPO A53***，下载�
 # 操作系统
 Ubuntu 18.04.5 LTS
 
-# 拆包的过程：
+# 拆包的流程：
      1. ozip解压。
      2. *.new.dat.br 文件解压。这里我只需要system.new.dat.br，所以，我只将system.new.dat.br解压了。
      3. *.new.dat 和*.transfer.list文件转换成*.img。这里我将system.new.dat和system.transfer.list转成了system.img
