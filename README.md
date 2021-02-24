@@ -14,8 +14,11 @@
       3. system.img挂载的问题。
 
 ## 1. ozip解压问题。
-     结论：ozip解压可以通过ozipdecrypt.py搞定。ozipdecrypt.py 来自于: <https://github.com/bkerler/oppo_ozip_decrypt/blob/master/ozipdecrypt.py>
+     结论：ozip解压可以通过ozipdecrypt.py搞定。ozipdecrypt.py 来自于: [ozipdecrypt.py][1]
      
 ## 2. 通过system.new.dat和system.transfer.list得到system.img问题。
 
 ## 3. system.img挂载的问题。
+
+
+[1]:https://github.com/bkerler/oppo_ozip_decrypt/blob/master/ozipdecrypt.py
