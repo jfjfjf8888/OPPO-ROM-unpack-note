@@ -63,6 +63,12 @@ EXT4-fs (loop21): couldn't mount RDWR because of unsupported optional features (
 #define EXT4_DEFM_BLOCK_VALIDITY 0x0200
 ```
 目测，上面这些define就是出自系统源码，于是随便复制了一行丢进Google，直接定位到了***ext4.h***中。[ext4.h][5]
+随后，我按Ctrl + F搜索 0x4000，排除了几个明显不是的，我找到了如下内容：
+```
+#define 	EXT4_FEATURE_INCOMPAT_LARGEDIR   0x4000 /* >2GB or 3-lvl htree */
+```
+看到这个，就明确了，system.img太大了。继续Google后发现，大文件要想mount，得以只读方式去mount，以只读方式mount也比较简单了，mount的
+帮助里面有写，参数加一个-r就搞定了。
 
 [1]:https://github.com/bkerler/oppo_ozip_decrypt/blob/master/ozipdecrypt.py
 [2]:https://assorted.downloads.oppo.com/firmware/CPH2127/CPH2127EU_11_OTA_0580_all_ou1osUyWrqeu.ozip
