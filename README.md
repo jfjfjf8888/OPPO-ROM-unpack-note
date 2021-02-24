@@ -11,6 +11,9 @@
 # ROM来源
 ROM是从OPPO官网找的，对应的手机型号是：OPPO A53，下载地址是:[CPH2127EU_11_OTA_0580_all_ou1osUyWrqeu.ozip][2]
 
+# 操作系统
+Ubuntu 18.04.5 LTS
+
 # 拆包的过程：
      1. ozip解压。
      2. *.new.dat.br 文件解压。这里我只需要system.new.dat.br，所以，我只将system.new.dat.br解压了。
