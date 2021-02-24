@@ -9,7 +9,7 @@
      拿过来，拆开，查看app使用到的一些功能的系统实现。拆包的过程我在此记录下来，希望能帮到后来者。
      
 # ROM来源
-ROM是从OPPO官网找的，对应的手机型号是：OPPO A53，下载地址是:[CPH2127EU_11_OTA_0580_all_ou1osUyWrqeu.ozip][2]
+ROM是从OPPO官网找的，对应的手机型号是：***OPPO A53***，下载地址是:[CPH2127EU_11_OTA_0580_all_ou1osUyWrqeu.ozip][2]
 
 # 操作系统
 Ubuntu 18.04.5 LTS
