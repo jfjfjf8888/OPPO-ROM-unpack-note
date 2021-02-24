@@ -19,8 +19,7 @@ ROM是从OPPO官网找的，对应的手机型号是：OPPO A53，下载地址�
 
 # 拆包过程中遇到的问题：
       1. ozip解压问题。
-      2. 通过system.new.dat和system.transfer.list得到system.img问题。
-      3. system.img挂载的问题。
+      2. system.img挂载的问题。
 
 ## 1. ozip解压问题。
 ### 结论：
@@ -30,10 +29,14 @@ ozip解压可以通过ozipdecrypt.py搞定。ozipdecrypt.py 来自于: [ozipdecr
 解密，***文件签名是"OPPOENCRYPT!"***。由于最初的偷懒，挣扎了许久，看到文件都解压出来了，我都没有怀疑是解压工具的问题。后来实在不知道为什么，才重新
 找到了上述***ozipdecrypt.py***来试试，试过才知道，这个真香！！！
 
-## 2. 通过system.new.dat和system.transfer.list得到system.img问题。
-通过***brotli***工具将***system.new.dat.br***弄成***system.new.dat***
-## 3. system.img挂载的问题。
+## 2. system.img挂载的问题。
+使用mount命令挂载system.img始终出现错误。错误类似与如下的样子:
+```
+    mount: wrong fs type, bad option, bad superblock on /dev/loop21,
+           missing codepage or helper program, or other error
+```
 
 
 [1]:https://github.com/bkerler/oppo_ozip_decrypt/blob/master/ozipdecrypt.py
 [2]:https://assorted.downloads.oppo.com/firmware/CPH2127/CPH2127EU_11_OTA_0580_all_ou1osUyWrqeu.ozip
+[3]:https://github.com/google/brotli
