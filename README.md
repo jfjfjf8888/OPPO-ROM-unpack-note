@@ -48,6 +48,10 @@ mount: wrong fs type, bad option, bad superblock on /dev/sdf1,
        In some cases useful info is found in syslog - try
        dmesg | tail  or so
 ```
+看到这个提示，抱着试一试的心态，在我的终端里敲出了***dmesg***，然后回车。之后发现了我在mount system.img时发生的错误，如下：
+```
+EXT4-fs (loop21): couldn't mount RDWR because of unsupported optional features (4000)
+```
 
 [1]:https://github.com/bkerler/oppo_ozip_decrypt/blob/master/ozipdecrypt.py
 [2]:https://assorted.downloads.oppo.com/firmware/CPH2127/CPH2127EU_11_OTA_0580_all_ou1osUyWrqeu.ozip
