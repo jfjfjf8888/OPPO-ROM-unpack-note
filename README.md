@@ -21,7 +21,7 @@ ROM是从OPPO官网找的，对应的手机型号是：OPPO A53，下载地址�
 ozip解压可以通过ozipdecrypt.py搞定。ozipdecrypt.py 来自于: [ozipdecrypt.py][1]
 ### 走过的弯路：
 最初我图方便，在一个论坛找到了一个名为***IZArc***的可视化工具解压缩ozip文件，其中***system.new.dat.br***解压出来是正常的，***system.transfer.list***不正常，没有正常
-解密，***文件签名是"OPPOENCRYPT!"。***由于最初的偷懒，挣扎了许久，看到文件都解压出来了，我都没有怀疑是解压工具的问题。后来实在不知道为什么，才重新
+解密，***文件签名是"OPPOENCRYPT!"***。由于最初的偷懒，挣扎了许久，看到文件都解压出来了，我都没有怀疑是解压工具的问题。后来实在不知道为什么，才重新
 找到了上述***ozipdecrypt.py***来试试，试过才知道，这个真香！！！
 
 ## 2. 通过system.new.dat和system.transfer.list得到system.img问题。
