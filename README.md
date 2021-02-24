@@ -52,7 +52,19 @@ mount: wrong fs type, bad option, bad superblock on /dev/sdf1,
 ```
 EXT4-fs (loop21): couldn't mount RDWR because of unsupported optional features (4000)
 ```
+又把上面这一堆玩意儿丢进了Google，发现很多人遇到这个东西，不过后面的错误码400比较多，而我的是4000。于是继续在Google上溜达。之后发现
+一篇名为[无法挂载的Ext4，because of unsupported optional features][4]的文章。这个帖子作者看样子是找到linux系统源码里去了，他遇到的错误码
+是200。看到如下内容我感觉豁然开朗:
+```
+#define EXT2_MOUNT_NO_UID32     0x0200  /* Disable 32-bit UIDs */
+#define EXT4_FEATURE_COMPAT_SPARSE_SUPER2   0x0200
+#define EXT4_FEATURE_RO_COMPAT_BIGALLOC     0x0200
+#define EXT4_FEATURE_INCOMPAT_FLEX_BG       0x0200
+#define EXT4_DEFM_BLOCK_VALIDITY 0x0200
+```
+
 
 [1]:https://github.com/bkerler/oppo_ozip_decrypt/blob/master/ozipdecrypt.py
 [2]:https://assorted.downloads.oppo.com/firmware/CPH2127/CPH2127EU_11_OTA_0580_all_ou1osUyWrqeu.ozip
 [3]:https://github.com/google/brotli
+[4]:https://www.jianshu.com/p/3af1ee22821f
