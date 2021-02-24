@@ -36,7 +36,7 @@ ozip解压可以通过ozipdecrypt.py搞定。ozipdecrypt.py 来自于: [ozipdecr
 
 ## 2. system.img挂载的问题。
 ### 结论:
-OPPO的system.img 太大了(我这个弄出来4.3GB)，直接mount是不行的，得以***只读方式***mount。
+OPPO的system.img 太大了(我这个弄出来4.3GB)，直接mount是不行的，得以***只读方式***mount。mount 的时候参数里面加一个***"-r"***就可以了
 ### 走弯路的过程:
 使用mount命令挂载system.img始终出现错误。错误类似与如下的样子:
 ```
@@ -71,6 +71,10 @@ EXT4-fs (loop21): couldn't mount RDWR because of unsupported optional features (
 ```
 看到这个，就明确了，system.img太大了。继续Google后发现，大文件要想mount，得以只读方式去mount，以只读方式mount也比较简单了，mount的
 帮助里面有写，参数加一个-r就搞定了。
+
+# 最后
+详细拆包过程我就没写了，网上太多了，泛滥了。
+到这里，我就可以拿到系统frameworks的jar文件了，再见～
 
 [1]:https://github.com/bkerler/oppo_ozip_decrypt/blob/master/ozipdecrypt.py
 [2]:https://assorted.downloads.oppo.com/firmware/CPH2127/CPH2127EU_11_OTA_0580_all_ou1osUyWrqeu.ozip
