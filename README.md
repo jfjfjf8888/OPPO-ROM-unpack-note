@@ -34,7 +34,7 @@ ozip解压可以通过ozipdecrypt.py搞定。ozipdecrypt.py 来自于: [ozipdecr
 
 ## 2. system.img挂载的问题。
 ### 结论:
-OPPO的system.img 太大了(我这个弄出来4.3)，直接mount是不行的，得以***只读方式***mount。
+OPPO的system.img 太大了(我这个弄出来4.3GB)，直接mount是不行的，得以***只读方式***mount。
 ### 走弯路的过程:
 使用mount命令挂载system.img始终出现错误。错误类似与如下的样子:
 ```
