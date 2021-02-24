@@ -6,3 +6,8 @@
 
 # 摘要
 近期公司开发了一个Android app，在OPPO某些机型上运行app出现奇怪了BUG，为了彻底解决问题，我想把OPPO 的ROM那过来，拆开，查看app使用到的一些功能的系统实现。
+
+# 拆包过程中遇到的问题：
+## 1. ozip解压问题。
+## 2. 通过system.new.dat和system.transfer.list得到system.img问题。
+## 3. system.img挂载的问题。
