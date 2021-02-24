@@ -41,7 +41,13 @@ OPPO的system.img 太大了(我这个弄出来4.3GB)，直接mount是不行的�
     mount: wrong fs type, bad option, bad superblock on /dev/loop21,
            missing codepage or helper program, or other error
 ```
-
+上面是我的Ubuntu的报错，看到这个错误我也不知道怎么办，只好复制下来去Google，我看到了别人也有过这个错，但是后面似乎多点东西，如下:
+```
+mount: wrong fs type, bad option, bad superblock on /dev/sdf1,
+       missing codepage or helper program, or other error
+       In some cases useful info is found in syslog - try
+       dmesg | tail  or so
+```
 
 [1]:https://github.com/bkerler/oppo_ozip_decrypt/blob/master/ozipdecrypt.py
 [2]:https://assorted.downloads.oppo.com/firmware/CPH2127/CPH2127EU_11_OTA_0580_all_ou1osUyWrqeu.ozip
